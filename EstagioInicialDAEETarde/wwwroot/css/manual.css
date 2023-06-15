@@ -1,0 +1,41 @@
+﻿
+#section-01 {
+    margin-bottom: 100px;
+}
+
+#section-01 .image img {
+    width: 100%;
+}
+
+#section-01 h1:first-child {
+    height: fit-content;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: darkred;
+   
+}
+
+.nav-link {
+    color: black;
+}
+
+#section-02 {
+    margin-bottom: 100px;
+}
+
+.jquery-item {
+    margin: 5px 0px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    max-width: 150px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    color: #535252;
+}
