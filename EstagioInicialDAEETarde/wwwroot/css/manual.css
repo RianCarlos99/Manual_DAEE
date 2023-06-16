@@ -1,6 +1,105 @@
 ﻿
+.bgPersonal {
+    height: 200px;
+    background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardImage {
+    width: 100%;
+    min-height: 100px;
+    height: 250px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.title {
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    opacity: 0;
+    
+
+    position: absolute;
+    background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+    transition: opacity 0.4s ease;
+    
+    color: white;
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+    padding: 20px;
+}
+
+.content:hover {
+    opacity: 1;
+}
+
+.container-grid {
+    max-width: 1080px;
+    display: grid;
+    gap: 10px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr 3fr;
+    grid-area: 1 / 4;
+}
+
+.cardImage:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1
+}
+
+.cardImage:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+.cardImage:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.cardImage:nth-child(4) {
+    grid-column: 2 / 4;
+    grid-row: 2;
+}
+
+.manualTitle {
+    color: white;
+    font-size: 72px;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+}
+
+.daeeTitle {
+    color: white;
+    font-size: 20px;
+}
+
+.bgPersonal img {
+    width: 100%;
+}
+
 #section-01 {
-    margin-bottom: 100px;
+    margin: 50px 0;
 }
 
 #section-01 .image img {
@@ -9,16 +108,6 @@
 
 #section-01 h1:first-child {
     height: fit-content;
-}
-
-h2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 5px;
-    background: darkred;
-   
 }
 
 .nav-link {
@@ -34,8 +123,30 @@ h2::before {
     display: block;
     text-align: center;
     padding: 5px;
-    max-width: 150px;
+    min-width: 150px;
     background: #f2f2f2;
     border-radius: 10px;
     color: #535252;
+}
+
+.cardPersonal {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.containerPersonal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+strong.letter {
+    text-align: center;
+    font-size: 70px;
+    width: 70px;
+}
+
+.descricao {
+    max-width: 800px;
 }

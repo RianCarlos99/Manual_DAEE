@@ -2,32 +2,12 @@
     ViewData["Title"] = "Manual";
 }
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
-    <div class="container-fluid">
-        <div class="navbar-brand" href="#">Manual</div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link n-color" aria-current="page" href="#section-01">Git Flow</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section-02">JQuery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#section-03">MVC</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<div class="bgPersonal">
+    <div class="manualTitle">Estágio Inicial DAEE</div>
+</div>
 
 <section id="section-01">
-      <h2>GIT FLOW</h2>
+      <h2 class="bef-title">GIT FLOW</h2>
       
       <div class="row">
         <div class="accordion accordion-flush col-sm-6" id="accordionFlushExample">
@@ -96,49 +76,61 @@
   </section>
 
 <section id="section-02">
-    <h2>jQuery</h2>
-
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">O que é?</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Construtor</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Exemplos da sintaxe</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="funcao-tab" data-bs-toggle="tab" data-bs-target="#funcao-tab-pane" type="button" role="tab" aria-controls="funcao-tab-pane" aria-selected="false">Função $(document).ready()</button>
-        </li>
-        
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-            jQuery é uma biblioteca de código aberto (código aberto) e possui licença dual, fazendo uso da Licença MIT ou da GNU General Public License versão 2.
-            A sintaxe do jQuery foi desenvolvida para simplificar a navegação em documentos HTML, a seleção de elementos DOM, criar animações, manipular eventos, desenvolver aplicações AJAX e criação de plugins sobre ela, permitindo aos desenvolvedores criarem camadas de abstração para interações de baixo nível de modo simplificado em aplicações web de grande complexidade.
-
+    <h2 class="bef-title">JQuery</h2>
+    
+    <div class="container-grid">
+        <div class="cardImage" style="background: url(/img/2020-03-31-whatsapp-business.png) no-repeat center center; background-size: cover">
+            <div class="content">jQuery é uma biblioteca de código aberto (código aberto) e possui licença dual, fazendo uso da Licença MIT ou da GNU General Public License versão 2. A sintaxe do jQuery foi desenvolvida para simplificar a navegação em documentos HTML, a seleção de elementos DOM, criar animações, manipular eventos, desenvolver aplicações AJAX e criação de plugins sobre ela, permitindo aos desenvolvedores criarem camadas de abstração para interações de baixo nível de modo simplificado em aplicações web de grande complexidade.</div>
+            <div class="title">O que é?</div>
         </div>
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            Com a jQuery temos que utilizar a função <span style="color: red">$(alvo)</span> para encontrarmos um elemento HTML dentro da aplicação e utilizarmos as funções da biblioteca. Essa função é tecnicamente conhecida como construtor ou função construtora e ela estará presente em todas as aplicações que utilizarmos a jQuery.
-            Ela é denominada desse modo para ser fácil de decorar, e o fato de se chamar $ evita a possibilidade de ocorrer conflitos com outras funções da biblioteca do usuário. Ocasionalmente podemos vir a utilizar alguma outra biblioteca que também tenha como uso uma função chamada $. Caso isso acontece podemos usar como alternativa a função jQuery().
-            Obs.: <span style="color: red">alvo</span> equivale a um seletor para TAG, ID ou classe
 
+        <div class="cardImage" style="background: url(/img/Bg-principal.jpg) ; background-size: cover">
+            <div class="content">
+                Com a jQuery temos que utilizar a função <span style="color: red">$(alvo)</span> para encontrarmos um elemento HTML dentro da aplicação e utilizarmos as funções da biblioteca. Essa função é tecnicamente conhecida como construtor ou função construtora e ela estará presente em todas as aplicações que utilizarmos a jQuery.
+                O fato de se chamar $ evita a possibilidade de ocorrer conflitos com outras funções da biblioteca do usuário. Ocasionalmente podemos vir a utilizar alguma outra biblioteca que também tenha como uso uma função chamada $. Caso isso acontece podemos usar como alternativa a função jQuery().
+               <br /> Obs.: <span style="color: red">alvo</span> equivale a um seletor para TAG, ID ou classe.
+            </div>
+            <div class="title">Construtor</div>
         </div>
-        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-            <strong class="jquery-item">$(‘h1’)</strong>
-            <strong class="jquery-item">$(‘p’)</strong>
-            <strong class="jquery-item">$(‘#conteudo’)</strong>
-            <strong class="jquery-item">$(‘.teste’)</strong>
+
+        <div class="cardImage" style="background: url(/img/istockphoto-1008207382-612x612.jpg) no-repeat center center; background-size: cover">
+            <div class="content" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <strong class="jquery-item">$(‘h1’)</strong>
+                <strong class="jquery-item">$(‘p’)</strong>
+                <strong class="jquery-item">$(‘#conteudo’)</strong>
+                <strong class="jquery-item">$(‘.teste’)</strong>
+            </div>
+            <div class="title">
+                Exemplos de Sintaxe
+            </div>
         </div>
-        <div class="tab-pane fade" id="funcao-tab-pane" role="tabpanel" aria-labelledby="funcao-tab" tabindex="0">
-            A função $(document).ready() é usada no jQuery para aguardar até que todo o documento HTML seja carregado antes de executar o código JavaScript. Isso garante que todos os elementos HTML existam na página antes de tentar interagir com eles usando o jQuery.
-            Ao usar $(document).ready(), você está definindo uma função que será executada assim que o navegador concluir a construção do DOM. Isso garante que todos os elementos HTML estejam prontos para serem manipulados pelo jQuery.
+
+        <div class="cardImage" style="background: url(/img/pexels-fauxels-3184292-1.jpg) no-repeat center center; background-size: cover">
+            <div class="content">
+                A função $(document).ready() é usada no jQuery para aguardar até que todo o documento HTML seja carregado antes de executar o código JavaScript. Isso garante que todos os elementos HTML existam na página antes de tentar interagir com eles usando o jQuery.
+                Ao usar $(document).ready(), você está definindo uma função que será executada assim que o navegador concluir a construção do DOM. Isso garante que todos os elementos HTML estejam prontos para serem manipulados pelo jQuery.
+            </div>
+            <div class="title">Função $(document).ready()</div>
         </div>
     </div>
+
   </section>
 
 <section id="section-03">
 
+    <div class="containerPersonal">
+        <div style="border-right: solid 50px #000887" class="cardPersonal">
+            <strong style="color: #000887" class="letter">M</strong>
+            <div class="descricao">O modelo representa os dados e a lógica de negócio da aplicação. Ele é responsável por gerenciar o acesso, a manipulação e a validação dos dados, além de conter a lógica que define como os dados devem ser processados e apresentados. O modelo é independente da interface do usuário (UI) e não tem conhecimento direto sobre a visualização ou o controlador.</div>
+        </div>
+        <div style="border-right: solid 50px #048ABF" class="cardPersonal">
+            <strong style="color: #048ABF" class="letter">V</strong>
+            <div class="descricao">A visualização é responsável pela apresentação dos dados ao usuário. Ela exibe a interface do usuário e interage com o usuário final. A visualização recebe dados do modelo e os apresenta de uma forma compreensível e adequada para o usuário. Ela não contém lógica de negócio significativa, mas pode conter algum código de apresentação para formatar e exibir os dados.</div>
+        </div>
+        <div style="border-right: solid 50px #04C4D9" class="cardPersonal">
+            <strong style="color: #04C4D9" class="letter">C</strong>
+            <div class="descricao">O controlador lida com as interações do usuário e coordena o fluxo de dados entre o modelo e a visualização. Ele recebe as entradas do usuário e toma as ações apropriadas com base nessas entradas. Ele atualiza o modelo quando necessário e atualiza a visualização para refletir as alterações nos dados. O controlador é responsável pela lógica de coordenação e controle do aplicativo.</div>
+        </div>
+    </div>
 </section>
 
