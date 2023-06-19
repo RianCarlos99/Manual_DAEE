@@ -8,5 +8,20 @@ namespace WebMvcMysql.Controllers
         {
             return View();
         }
+
+        public IActionResult Jquery()
+        {
+            return View();
+        }
+
+        public IActionResult MVC()
+        {
+            return View();
+        }
+
+        public IActionResult Scrum()
+        {
+            return View();
+        }
     }
 }

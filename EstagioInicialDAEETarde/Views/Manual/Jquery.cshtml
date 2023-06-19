@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Manual";
+}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="navbar-brand">Manual</div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" asp-action="Index">Git Flow</a>
+                <a class="nav-link" asp-action="Jquery">JQuery</a>
+                <a class="nav-link" asp-action="Mvc">MVC</a>
+                <a class="nav-link" asp-action="Scrum">Scrum</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="bgPersonal">
+    <div class="manualTitle">Estágio Inicial DAEE</div>
+</div>
+
+<section id="section-02">
+    <h2 class="bef-title">JQuery</h2>
+
+    <div class="container-grid">
+        <div class="cardImage" style="background: url(/img/2020-03-31-whatsapp-business.png) no-repeat center center; background-size: cover">
+            <div class="content">jQuery é uma biblioteca de código aberto (código aberto) e possui licença dual, fazendo uso da Licença MIT ou da GNU General Public License versão 2. A sintaxe do jQuery foi desenvolvida para simplificar a navegação em documentos HTML, a seleção de elementos DOM, criar animações, manipular eventos, desenvolver aplicações AJAX e criação de plugins sobre ela, permitindo aos desenvolvedores criarem camadas de abstração para interações de baixo nível de modo simplificado em aplicações web de grande complexidade.</div>
+            <div class="title">O que é?</div>
+        </div>
+
+        <div class="cardImage" style="background: url(/img/Bg-principal.jpg) ; background-size: cover">
+            <div class="content">
+                Com a jQuery temos que utilizar a função <span style="color: red">$(alvo)</span> para encontrarmos um elemento HTML dentro da aplicação e utilizarmos as funções da biblioteca. Essa função é tecnicamente conhecida como construtor ou função construtora e ela estará presente em todas as aplicações que utilizarmos a jQuery.
+                O fato de se chamar $ evita a possibilidade de ocorrer conflitos com outras funções da biblioteca do usuário. Ocasionalmente podemos vir a utilizar alguma outra biblioteca que também tenha como uso uma função chamada $. Caso isso acontece podemos usar como alternativa a função jQuery().
+                <br /> Obs.: <span style="color: red">alvo</span> equivale a um seletor para TAG, ID ou classe.
+            </div>
+            <div class="title">Construtor</div>
+        </div>
+
+        <div class="cardImage" style="background: url(/img/istockphoto-1008207382-612x612.jpg) no-repeat center center; background-size: cover">
+            <div class="content" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <strong class="jquery-item">$(‘h1’)</strong>
+                <strong class="jquery-item">$(‘p’)</strong>
+                <strong class="jquery-item">$(‘#conteudo’)</strong>
+                <strong class="jquery-item">$(‘.teste’)</strong>
+            </div>
+            <div class="title">
+                Exemplos de Sintaxe
+            </div>
+        </div>
+
+        <div class="cardImage" style="background: url(/img/pexels-fauxels-3184292-1.jpg) no-repeat center center; background-size: cover">
+            <div class="content">
+                A função $(document).ready() é usada no jQuery para aguardar até que todo o documento HTML seja carregado antes de executar o código JavaScript. Isso garante que todos os elementos HTML existam na página antes de tentar interagir com eles usando o jQuery.
+                Ao usar $(document).ready(), você está definindo uma função que será executada assim que o navegador concluir a construção do DOM. Isso garante que todos os elementos HTML estejam prontos para serem manipulados pelo jQuery.
+            </div>
+            <div class="title">Função $(document).ready()</div>
+        </div>
+    </div>
+
+</section>
