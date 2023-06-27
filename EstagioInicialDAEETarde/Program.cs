@@ -1,9 +1,19 @@
+
+using EstagioInicialDAEETarde.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+builder.Services.AddDbContext<Contexto>
+    (options => options.UseMySql(
+        // "server=localhost;initial catalog=CRUD_MVC_MYSQL_AULA;uid=root;pwd=Windows10",
+        "server=10.20.42.3;initial catalog=manual;uid=root;pwd=T7m2*ZC5JcWv",
+        Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.25-mysql")));
+
+var app = builder.Build();          
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -13,10 +23,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
 
 app.UseAuthorization();
 
