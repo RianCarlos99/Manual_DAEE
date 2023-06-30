@@ -10,14 +10,15 @@ namespace EstagioInicialDAEETarde.Models
     {
         [Display(Name = "Código")]
         [Column("Id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
         
         [Column("Titulo")]
         public string? Titulo { get; set; }
 
-        [StringLength(120)]
+        [StringLength(420)]
         [Column("Descricao")]
         public string? Descricao { get; set; }
+
     }
 
 }

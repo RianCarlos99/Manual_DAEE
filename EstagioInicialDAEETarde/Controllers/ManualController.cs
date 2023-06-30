@@ -1,27 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EstagioInicialDAEETarde.Data;
+using EstagioInicialDAEETarde.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebMvcMysql.Controllers
 {
     public class ManualController : Controller
     {
+        private readonly Contexto _Contexto;
+        public ManualController(Contexto contexto)
+        {
+            _Contexto = contexto;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Git> conteudoGit = _Contexto.Git;
+            return View(conteudoGit);
         }
 
         public IActionResult Jquery()
         {
-            return View();
+            IEnumerable<Jquery> conteudoJquery = _Contexto.Jquery;
+            return View(conteudoJquery);
         }
 
         public IActionResult MVC()
-        {
-            return View();
+        {   IEnumerable<Mvc> conteudoMvc = _Contexto.Mvc;
+            return View(conteudoMvc);
         }
 
         public IActionResult Scrum()
         {
-            return View();
+            IEnumerable<Scrum> conteudoScrum = _Contexto.Scrum;
+            return View(conteudoScrum);
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿@{
+﻿@model IEnumerable<Scrum>
+
+@{
     ViewData["Title"] = "Manual";
+    string nomeImg;
 }
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -24,69 +27,26 @@
 </div>
 
 <section id="section-04">
-    <div class="scrum-card">
-        <div class="img">
-            <img src="~/img/product-backlog.jpg"/>
-        </div>
-        <p>O product backlog é uma lista de recursos, requisitos, melhorias e correções que devem ser concluidas para que projeto seja bem-sucedido. Em essência, é a lista de tarefas da equipe, que constantemente é revisitada e passa por redefinições de prioridade para se adaptar às mudanças do mercado. O responsável pelo produto / tarefas mantém e atualiza a lista, removendo itens irrelevantes ou adicionando novas solicitações de clientes.</p>
-    </div>
-
-    <div class="scrum-card">
-        <ul>
-            <p>Os líderes Scrum representam o Scrum dentro das equipes. São responsáveis pela eficácia da equipe. Orientam equipes, os responsáveis por produtos e a empresa para melhorar seus processos Scrum e otimizar resultados. Os líderes Scrum também são responsáveis por:</p>
-            <li>Planejar os recursos necessários para cada Sprint.</li>
-            <li>Promover outros eventos de Sprint e reuniões de equipe.</li>
-            <li>Conduzir a transformação digital na equipe.</li>
-            <li>Promover treinamentos da equipe ao adotar novas tecnologias.</li>
-            <li>Comunicar-se com grupos externos para solucionar possíveis desafios que a equipe esteja enfrentando como um todo.</li>
-        </ul>
-        <div class="img">
-            <img src="~/img/scrum-master.jpg"/>
-        </div>
-    </div>
-
-    <div class="scrum-card">
-        <div class="img">
-            <img src="~/img/planejamento-da-sprint.png"/>
-        </div>
-        <p>Nesse evento, a equipe estima o trabalho a ser concluído no próximo Sprint. Os membros definem metas de Sprint que sejam específicas, mensuráveis e atingíveis. Ao final da reunião de planejamento, cada membro Scrum sabe como cada incremento pode ser apresentado no Sprint.</p>
-    </div>
-
-    <div class="scrum-card">
-        <p>O Sprint é o período de tempo em que a equipe Scrum trabalhará em conjunto para concluir um incremento. Normalmente, um Sprint dura duas semanas, mas pode variar de acordo com as necessidades do projeto e da equipe. Quanto mais complexo for o trabalho e mais incógnitas houver, mais curto deve ser o Sprint.</p>
-        <div class="img">
-            <img src="~/img/sprint.png" />
-        </div>
-    </div>
-
-    <div class="scrum-card">
-        <div class="img">
-            <img src="~/img/review.jpg" />
-        </div>
-        <p>
-            Ao final do Sprint, a equipe se reúne para uma sessão informal para revisar o trabalho concluído e apresentá-lo às partes interessadas. O responsável pelo produto também pode retrabalhar o product backlog com base no Sprint atual.
-            A equipe também pode discutir o que funcionou e o que não funcionou durante o Sprint. As ideias geradas são usadas para melhorar Sprints futuros.
-        </p>
-    </div>
-
-    <div class="scrum-card">
-        <p>
-            A "daily" no Scrum é uma reunião diária curta e focada, também conhecida como Daily Scrum ou Daily Stand-up. É um evento regular realizado pela equipe de desenvolvimento do Scrum para sincronização, coordenação e planejamento do trabalho.
-
-            A Daily Scrum tem como objetivo principal permitir que os membros da equipe compartilhem informações sobre o progresso do trabalho, os desafios enfrentados e o plano para o próximo período. Geralmente, a reunião é realizada no mesmo local e horário todos os dias, de preferência de pé (daí o termo "stand-up"), para incentivar a brevidade e a agilidade.
-        </p>
-        <div class="img">
-            <img src="~/img/daily.jpg" />
-        </div>
-    </div>
-
-    <div class="scrum-card">
-        <div class="img">
-            <img src="~/img/epicos-historias.png" />
-        </div>
-        <p>Histórias são itens do Product Backlog que representam parte do produto a ser implementado. As Histórias devem conter uma descrição detalhada do que deve ser implementado.
-            <br /><br /> Já os épicos referem-se a itens de trabalho grandes e complexos que não podem ser facilmente concluídos dentro de um único sprint. Os épicos são histórias de usuário de alto nível, que descrevem funcionalidades ou requisitos abrangentes e geralmente exigem um esforço significativo para serem desenvolvidos e implementados.
-        </p>
-    </div>
-
+    @foreach(var item in Model)
+    {
+        nomeImg = $"scrum0{item.Id}.jpg";
+        if(item.Id % 2 == 0)
+        {
+            <div class="scrum-card">
+                <p>@Html.Raw(item.Definicao)</p>
+                
+                <div class="img">
+                    <img src="~/img/@nomeImg" />
+                </div>
+            </div>
+        }else
+        {
+            <div class="scrum-card">
+                <div class="img">
+                    <img src="~/img/@nomeImg" />
+                </div>
+                <p>@Html.Raw(item.Definicao)</p>
+            </div>
+        }
+    }
 </section>

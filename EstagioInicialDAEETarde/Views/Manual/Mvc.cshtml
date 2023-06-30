@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Mvc>
+
+@{
     ViewData["Title"] = "Manual";
 }
 
@@ -26,17 +28,12 @@
 <section id="section-03">
 
     <div class="containerPersonal">
-        <div style="border-right: solid 50px #000887" class="cardPersonal">
-            <strong style="color: #000887" class="letter">M</strong>
-            <div class="descricao">O modelo representa os dados e a lógica de negócio da aplicação. Ele é responsável por gerenciar o acesso, a manipulação e a validação dos dados, além de conter a lógica que define como os dados devem ser processados e apresentados. O modelo é independente da interface do usuário (UI) e não tem conhecimento direto sobre a visualização ou o controlador.</div>
-        </div>
-        <div style="border-right: solid 50px #048ABF" class="cardPersonal">
-            <strong style="color: #048ABF" class="letter">V</strong>
-            <div class="descricao">A visualização é responsável pela apresentação dos dados ao usuário. Ela exibe a interface do usuário e interage com o usuário final. A visualização recebe dados do modelo e os apresenta de uma forma compreensível e adequada para o usuário. Ela não contém lógica de negócio significativa, mas pode conter algum código de apresentação para formatar e exibir os dados.</div>
-        </div>
-        <div style="border-right: solid 50px #04C4D9" class="cardPersonal">
-            <strong style="color: #04C4D9" class="letter">C</strong>
-            <div class="descricao">O controlador lida com as interações do usuário e coordena o fluxo de dados entre o modelo e a visualização. Ele recebe as entradas do usuário e toma as ações apropriadas com base nessas entradas. Ele atualiza o modelo quando necessário e atualiza a visualização para refletir as alterações nos dados. O controlador é responsável pela lógica de coordenação e controle do aplicativo.</div>
-        </div>
+        @foreach(var item in Model)
+        {
+            <div style="border-right: solid 50px @item.Cor" class="cardPersonal">
+                <strong style="color: @item.Cor" class="letter">@item.Letra</strong>
+                <div class="descricao">@item.Descricao</div>
+            </div>
+        }
     </div>
 </section>

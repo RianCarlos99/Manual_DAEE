@@ -10,6 +10,8 @@ namespace EstagioInicialDAEETarde.Data
         { }
 
         public DbSet<Git> Git { get; set; }
-
+        public DbSet<Jquery> Jquery { get; set; }
+        public DbSet<Mvc> Mvc { get; set; }
+        public DbSet<Scrum> Scrum { get; set; }
     }
 }
