@@ -1,16 +1,65 @@
 ﻿
 .bgPersonal {
-    height: 200px;
+    height: 150px;
     background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px 20px 0 0 ;
+}
+
+progress {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.card-header {
+    transition: all .4s ease;
+}
+
+.img-marcaPagina {
+    width: 100%;
+    max-width: 50px;
+    position: absolute;
+    top: 225px;
+    left:0px;
+}
+
+.img-marcaPagina img {
+    width: 100%;
+}
+
+.card-header.blue:hover {
+    background: rgba(40,116,252, 0.5);
+}
+
+.card-header.migration:hover {
+    background: rgb(219,242,227);
+}
+
+.card-border-topLeft {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-border-bottomLeft {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.card-border-topRight {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .cardImage {
     width: 100%;
     min-height: 100px;
-    height: 250px;
+    height: 270px;
     border-radius: 16px;
     position: relative;
 }
@@ -38,7 +87,6 @@
     border-radius: 16px;
     opacity: 0;
     
-
     position: absolute;
     background: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
     transition: opacity 0.4s ease;
@@ -46,7 +94,7 @@
     color: white;
     font-size: 14px;
     font-family: Poppins, sans-serif;
-    padding: 20px;
+    padding: 15px;
 }
 
 .content:hover {
@@ -115,7 +163,7 @@
 }
 
 #section-02 {
-    margin: 50px 0;
+    margin: 50px 0 100px 0;
 }
 
 .jquery-item {
@@ -156,17 +204,19 @@ strong.letter {
 }
 
 .img {
-    max-width: 500px;
+    width: 100%;
+    max-width: 500px;   
 }
 
 .img img {
     width: 100%;
+    border-radius: 20px;
 }
 
 #section-04 {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 
     font-family: Poppins, sans-serif;
     font-weight: 400;
@@ -182,4 +232,164 @@ strong.letter {
 .scrum-card p {
     flex: 1;
 }
+
+.bg-Asp {
+    width: 100%;
+    height: 500px;
+    
+    background: #edf6ff;
+    border-radius: 0 0 20px 20px;
+    
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.last-Asp {
+    width: 100%;
+    height: 500px;
+    background: #8065e0;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.img-asp {
+    width: 100%;
+    max-width: 550px;
+}
+
+.img-asp img {
+    width: 100%;
+}
+
+.content-asp {
+    width: 100%;
+    max-width: 600px;
+    
+}
+
+.step-asp {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.leftBorder {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 10px;
+}
+
+.icon {
+    width: 100%;
+    max-width: 70px;
+    background: #fbc101;
+    box-sizing: content-box;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.img02-asp {
+    width: 100%;
+    max-width: 550px;
+}
+
+.img02-asp img {
+    width: 100%;
+}
+
+.img-code-vs {
+    width: 100%;
+    height: 650px;
+    max-width: 320px;
+    
+    background: url("../img/bg-visualStudio.png") center;
+    filter: blur(1px);
+    background-size: cover;
+    
+    border-radius: 180px;
+    z-index: -1;
+}
+
+.alignment {
+    text-align: justify;
+}
+
+.gitInt-left {
+    display: flex;
+    justify-content: center;
+}
+
+.img-icon-vs {
+    width: 100%;
+    max-width: 100px;
+    background: #212121;
+    padding: 20px;
+    
+    box-sizing: content-box;
+    border-radius: 50%;
+    
+    border: 2px solid white;
+    position: absolute;
+    left: 70px;
+}
+
+.img-icon-vs img {
+    width: 100%;
+}
+
+.img-icon-git {
+    width: 100%;
+    max-width: 100px;
+    padding: 20px;
+    background: #212121;
+    
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.img-icon-git img {
+    width: 100%;
+}
+
+.git-bg-cards {
+    background: url(../img/git-bg.png) center;
+    background-size: cover;
+
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.git-bg-blur {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(2px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
 

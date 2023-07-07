@@ -1,0 +1,99 @@
+﻿@*@model IEnumerable<Git>;*@
+
+@{
+    ViewData["Title"] = "Git Flow";
+}
+
+<div class="bgPersonal">
+    <div class="manualTitle">Estágio Inicial DAEE</div>
+</div>
+
+<section id="section-01">
+      <h2 class="bef-title">GIT FLOW</h2>
+      
+      <div class="row">
+        <div class="accordion accordion-flush col-sm-6" id="accordionFlushExample">
+
+         @*   @foreach(var item in Model)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@item.Id" aria-expanded="false" aria-controls="">
+                            <strong>@item.Titulo</strong>
+                        </button>
+                    </h2>
+                    <div id="@item.Id" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">@item.Descricao</div>
+                    </div>
+                </div>
+            }@*@
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FlushAccordionOne" aria-expanded="false" aria-controls="">
+                        <strong>Feature Branches</strong>
+                    </button>
+                </h2>
+                <div id="FlushAccordionOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Contém códigos que podem ou não ser incluídos na próxima RELEASE (HOMOLOG), 
+                        o merge das FEATUREs é realizado na branch DEVELOP.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FlushAccordionTwo" aria-expanded="false" aria-controls="">
+                        <strong>Develop Branch</strong>
+                    </button>
+                </h2>
+                <div id="FlushAccordionTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Contém features que serão disponibilizadas na próxima RELEASE.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FlushAccordionThree" aria-expanded="false" aria-controls="">
+                        <strong>Release Branch</strong>
+                    </button>
+                </h2>
+                <div id="FlushAccordionThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Contém o código de homologação, caso aprovado entrará na branch MASTER.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FlushAccordionFour" aria-expanded="false" aria-controls="">
+                        <strong>Hotfix Branches</strong>
+                    </button>
+                </h2>
+                <div id="FlushAccordionFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        Partem da branch master ou da branch que equivale a versão atual em produção,
+                        utilizada para um reparo imediato em produção.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FlushAccordionFive" aria-expanded="false" aria-controls="">
+                        <strong>Master Branch</strong>
+                    </button>
+                </h2>
+                <div id="FlushAccordionFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Contém o código da release atual, que entrará em produção, realizado o deploy é a versão atual do sistema.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="image col-sm-6 ">
+            <img src="~/img/git_flow-scaled.jpg"/>
+        </div>
+     </div> 
+</section>
+

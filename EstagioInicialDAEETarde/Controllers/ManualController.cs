@@ -12,16 +12,36 @@ namespace WebMvcMysql.Controllers
             _Contexto = contexto;
         }
 
-        public IActionResult Index()
+        public IActionResult GitFlow()
         {
             IEnumerable<Git> conteudoGit = _Contexto.Git;
             return View(conteudoGit);
+        }
+
+        public IActionResult EntityFramework()
+        {
+            return View();
+        }
+
+        public IActionResult GitIntegrado()
+        {
+            return View();
         }
 
         public IActionResult Jquery()
         {
             IEnumerable<Jquery> conteudoJquery = _Contexto.Jquery;
             return View(conteudoJquery);
+        }
+
+        public IActionResult Git()
+        {
+            return View();
+        }
+
+        public IActionResult AspNet()
+        {
+            return View();
         }
 
         public IActionResult MVC()

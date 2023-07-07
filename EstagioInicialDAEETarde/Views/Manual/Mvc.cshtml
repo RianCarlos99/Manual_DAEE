@@ -1,25 +1,8 @@
-﻿@model IEnumerable<Mvc>
+﻿@*@model IEnumerable<Mvc>*@
 
 @{
     ViewData["Title"] = "Manual";
 }
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <div class="navbar-brand">Manual</div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" asp-action="Index">Git Flow</a>
-                <a class="nav-link" asp-action="Jquery">JQuery</a>
-                <a class="nav-link" asp-action="Mvc">MVC</a>
-                <a class="nav-link" asp-action="Scrum">Scrum</a>
-            </div>
-        </div>
-    </div>
-</nav>
 
 <div class="bgPersonal">
     <div class="manualTitle">Estágio Inicial DAEE</div>
@@ -28,12 +11,43 @@
 <section id="section-03">
 
     <div class="containerPersonal">
-        @foreach(var item in Model)
+      @*MESMO LAYOUT SENDO PUXADO DO BANCO*@
+        @* @foreach(var item in Model)
         {
             <div style="border-right: solid 50px @item.Cor" class="cardPersonal">
                 <strong style="color: @item.Cor" class="letter">@item.Letra</strong>
                 <div class="descricao">@item.Descricao</div>
             </div>
-        }
+        }*@
+
+        <div style="border-right: solid 50px  #000887" class="cardPersonal">
+            <strong style="color:  #000887" class="letter">M</strong>
+            <div class="descricao">
+                O modelo representa os dados e a lógica de negócio da aplicação.
+                Ele é responsável por gerenciar o acesso, a manipulação e a validação dos dados, além de conter a lógica que define como os dados devem ser processados e apresentados.
+                O modelo é independente da interface do usuário (UI) e não tem conhecimento direto sobre a visualização ou o controlador.
+            </div>
+        </div>
+
+        <div style="border-right: solid 50px  #048ABF" class="cardPersonal">
+            <strong style="color:  #048ABF" class="letter">V</strong>
+            <div class="descricao">
+                A visualização é responsável pela apresentação dos dados ao usuário. 
+                Ela exibe a interface do usuário e interage com o usuário final. 
+                A visualização recebe dados do modelo e os apresenta de uma forma compreensível e adequada para o usuário. 
+                Ela não contém lógica de negócio significativa, mas pode conter algum código de apresentação para formatar e exibir os dados.
+            </div>
+        </div>
+
+        <div style="border-right: solid 50px  #04C4D9" class="cardPersonal">
+            <strong style="color:  #04C4D9" class="letter">C</strong>
+            <div class="descricao">
+                O controlador lida com as interações do usuário e coordena o fluxo de dados entre o modelo e a visualização.
+                Ele recebe as entradas do usuário e toma as ações apropriadas com base nessas entradas.
+                Ele atualiza o modelo quando necessário e atualiza a visualização para refletir as alterações nos dados.
+                O controlador é responsável pela lógica de coordenação e controle do aplicativo.
+            </div>
+        </div>
+
     </div>
 </section>

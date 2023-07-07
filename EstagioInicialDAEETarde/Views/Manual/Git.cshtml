@@ -1,0 +1,171 @@
+﻿@*@model IEnumerable<Git>;*@
+
+@{
+    ViewData["Title"] = "Git";
+}
+
+<div class="bgPersonal git">
+    <div class="manualTitle">Estágio Inicial DAEE</div>
+</div>
+
+<section id="section-01">
+    
+    <div class="row">
+        
+        <div class="image col-sm-6 ">
+            <img src="~/img/Git_logo.png" />
+        </div>
+        
+        <div class="accordion col-sm-6" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>Mas afinal o que é GIT ?</strong>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>GIT é um Sistema de Controle de Versões Distribuído.</strong> Estes sistemas de controle possuem a função de registrar quaisquer alterações feitas em cima de um código, armazenando essas informações e permitindo que, caso seja necessário, um(a) programador(a) possa regredir a versões anteriores de uma aplicação de modo simples e rápido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Os conceitos do Git</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Para começar a utilizar o GIT, é importante que você reconheça e compreenda alguns dos principais conceitos utilizados pela ferramenta.<br /><br />
+
+                        Esta compreensão prévia quebrará alguns obstáculos característicos dos primeiros momentos em que manipulamos uma plataforma nova.<br /><br />
+
+                        Abaixo, listamos e explicamos o que significam algumas nomenclaturas básicas muito comuns na manipulação de códigos-fonte no GIT e no GitHub.
+                    </div>
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    <strong>Repositorio</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    Os repositórios são os ambientes criados para armazenar seus códigos.<br /><br />
+
+                                    Você pode possuir um ou mais repositórios, públicos ou privados, locais ou remotos, e eles podem armazenar não somente os próprios códigos a serem modificados, mas também imagens, áudios, arquivos e outros elementos relacionados ao seu projeto.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                    <strong>  Branch</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    Branch é o nome dado a uma versão (ramificação) do projeto.<br /><br />
+
+                                    Isso é útil porque possibilita gerenciar múltiplas alterações acontecendo simultaneamente. Por exemplo, podemos fazer com que cada equipe de desenvolvimento
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                                    <strong>Merge</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    Para unir as modificações feitas em um branch ao código original, utilizamos o comando merge.<br /><br />
+
+                                    Com esta funcionalidade, todas as alterações feitas em cópias manipuláveis são inseridas, após aprovadas, no código-fonte original sem complicações.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFor" aria-expanded="true" aria-controls="panelsStayOpen-collapseFor">
+                                    <strong>Fork</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFor" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    Quando um profissional desenvolvedor precisa começar a trabalhar em um projeto, seu primeiro passo é copiar este repositório para a sua máquina.<br /><br />
+
+                                    Este processo é realizado pelo comando fork.<br /><br />
+
+                                    O fork também é uma funcionalidade útil quando um membro da equipe precisa pegar um código público para manuseá-lo em um editor de código local ou interno.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <strong> Principais comandos Git</strong>
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Se você estiver familiarizado com alguns dos principais comandos do GIT, seus primeiros passos na ferramenta podem se tornar mais descomplicados.<br /><br />
+
+                        Para isso, trouxemos abaixo uma lista dos comandos mais utilizados pelos programadores(as) e o que eles significam.
+                    </div>
+                    <div class="accordion" id="accordionPanelsStayOpenExampleTwo">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                    <strong>Comandos</strong>
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>
+                                            <code> Init:</code> este comando dá origem a um repositório novo, local ou remoto, ou reinicializa um repositório já existente;
+                                        </li>
+                                        <li>
+                                            <code> Clone:</code> este comando clona o código de um repositório para sua manipulação em outro ambiente;
+                                        </li>
+                                        <li>
+                                            <code>Commit:</code> este comando move os arquivos da state area para um repositório local;
+                                        </li>
+                                        <li>
+                                            <code>Add:</code> este comando adiciona um arquivo alterado a uma staging area, ou seja, o prepara para ser vinculado a um commit;
+                                        </li>
+                                        <li>
+                                            <code>Push:</code> este comando envia arquivos de um repositório local para um repositório remoto. No GitHub, por exemplo;
+                                        </li>
+                                        <li>
+                                            <code>Pull:</code> ao contrário do push, este comando traz um arquivo do repositório remoto para o repositório local.
+                                        </li>
+                                        <li>
+                                            <code>Merge:</code> este comando serve para unir arquivos alterados ao arquivo original de um projeto. Em outras palavras, é ele quem une os branchs as commits.
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+

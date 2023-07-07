@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Entity Framework";
+}
+
+<div class="bgPersonal">
+    <div class="manualTitle">Estágio Inicial DAEE</div>
+</div>
+
+<section style="" id="section-06">
+    <progress max="100" value="0"></progress>
+    
+    <div class="info mb-5">
+        <div>
+            <h1>Entity Framework</h1>
+            <p>
+                O Entity Framework é um framework de mapeamento objeto-relacional (ORM - Object-Relational Mapping) desenvolvido pela Microsoft.
+                Ele permite que os desenvolvedores trabalhem com dados em um banco de dados relacional usando objetos e classes no contexto do .NET.
+                O Entity é amplamente utilizado para desenvolver aplicativos .NET que requerem acesso a bancos de dados relacionais.
+                Ele oferece uma abstração poderosa e facilita o desenvolvimento de aplicativos que lidam com dados persistentes.
+            </p>
+
+            <div class="d-flex gap-2 justify-content-center flex-wrap mt-4">
+                <div class="card border-primary mb-3" style="max-width: 48%" data-aos="zoom-in">
+                    <div class="card-header blue">ORM</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Mapeamento objeto-relacional</h4>
+                        <p class="card-text">
+                            O Entity Framework mapeia automaticamente as classes do aplicativo para as tabelas do banco de dados,
+                            bem como as propriedades das classes para as colunas das tabelas. Isso elimina a necessidade de escrever consultas SQL manualmente para cada operação.
+                        </p>
+                    </div>
+                </div>
+                <div class="card border-primary mb-3" style="max-width: 48%" data-aos="zoom-in">
+                    <div class="card-header blue">CONTROLE</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Controle de alterações</h4>
+                        <p class="card-text">
+                            O Entity Framework rastreia automaticamente as alterações feitas nos objetos do modelo e gera automaticamente as
+                            instruções SQL necessárias para persistir essas alterações no banco de dados.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card border-primary mb-3" style="max-width: 48%" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card-header blue">CONSULTA</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Consultas LINQ</h4>
+                        <p class="card-text">
+                            O Entity Framework permite escrever consultas usando a linguagem de consulta LINQ (Language Integrated Query),
+                            que é uma sintaxe de consulta integrada ao .NET. Isso facilita a criação de consultas mais legíveis e expressivas,
+                            usando a sintaxe familiar do C# ou VB.NET.
+                        </p>
+                    </div>
+                </div>
+                <div class="card border-primary mb-3" style="max-width: 48%" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <div class="card-header blue">BANCO</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Geração de banco de dados</h4>
+                        <p class="card-text">
+                            O Entity Framework pode criar automaticamente o esquema do banco de dados com base no
+                            seu modelo de objetos ou atualizar o esquema existente para refletir as alterações no modelo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 position-relative">
+            <div class="img-marcaPagina">
+                <img src="~/img/marcaPagina.png"/>
+            </div>
+            <h1>Migrations</h1>
+            <p>
+                No contexto do Entity Framework, as Migrations são uma abordagem para gerenciar alterações na infraestrutura do banco de dados ao longo do tempo.
+                As Migrations permitem que você altere a estrutura do banco de dados de forma controlada e automatizada, mantendo um histórico de todas as alterações realizadas.
+                <br />Com elas, o Entity Framework mantém um histórico das alterações feitas no esquema do banco de dados em uma série de arquivos de migração.
+                Cada arquivo de migração contém instruções para atualizar o esquema do banco de dados de uma versão para outra, seguindo as alterações
+                feitas nas classes do modelo de dados.
+            </p>
+
+            <div class="d-flex justify-content-center flex-wrap mt-4">
+                <div class="card-border-topLeft p-3" style="max-width: 48%">
+                    <div class="pb-1">Adicionar migração</div>
+                    <div>
+                        <h5>dotnet ef migrations add nome_migration</h5>
+                        <p class="">
+                            O Entity Framework mapeia automaticamente as classes do aplicativo para as tabelas do banco de dados,
+                            bem como as propriedades das classes para as colunas das tabelas. Isso elimina a necessidade de escrever consultas SQL manualmente para cada operação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-border-topRight p-3" style="max-width: 48%">
+                    <div class="pb-1">Atualizar o banco</div>
+                    <div>
+                        <h5>dotnet ef database update</h5>
+                        <p>
+                            Este comando aplica todas as migrações pendentes no banco de dados. Ele atualiza o esquema do banco de dados para refletir 
+                            as alterações definidas nas migrações. Se o banco de dados ainda não existir, ele será criado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-border-bottomLeft p-3" style="max-width: 48%">
+                    <div class="pb-1">Remover migração</div>
+                    <div>
+                        <h5>dotnet ef migrations remove</h5>
+                        <p>
+                            Este comando remove a migração mais recente. Ele desfaz a alteração definida na migração e atualiza o esquema 
+                            do banco de dados para a versão anterior.
+                        </p>
+                    </div>
+                </div>
+                <div class="p-3" style="max-width: 48%">
+                    <div>Listagem</div>
+                    <div>
+                        <h5>dotnet ef migrations list</h5>
+                        <p>
+                            Este comando lista todas as migrações existentes no projeto. 
+                            Ele exibe informações sobre cada migração, como o nome, a data de criação e se foi aplicada ao banco de dados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(document).ready(function () {
+        
+        $(window).scroll(function () {
+            var screenWidth = $(document).height() - $(window).height();
+            var scrollHeight = $(window).scrollTop();
+           
+            $('progress').attr('value', scrollHeight);
+            $('progress').attr('max', screenWidth);
+        });
+    });
+</script>
