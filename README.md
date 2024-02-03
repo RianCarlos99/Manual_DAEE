@@ -1,5 +1,5 @@
 # Manual DAEE (Estágio)
-> Treinamento com site apresentando tecnologias utilizadas nesse estágio
+> Semana inicial na empresa, foi solicitado que eu desenvolvesse um tipo de manual afim de me familiarizar com as tecnologias novas que eu teria contato. Acabei transformando ele em um site onde cada rota era uma tech diferente, misturando conhecimentos que eu já tinha com os novos adquiridos.
 ## Asp Net Page
 <img src='https://github.com/RianCarlos99/Manual_DAEE/blob/master/Screenshots/aspNet.png' />
 <br/>
